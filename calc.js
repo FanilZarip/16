@@ -24,27 +24,27 @@ function Calc(mathOperation, a, b) {
 	if (isNotValid) {
 		return 'Error';
 	} else if (mathOperation == 'sum') {
-		return a + b;
+		return `Результат сложения ${a} и ${b}: ${a + b}`;
 	} else if (mathOperation == 'multi') {
-		return a * b;
+		return `Результат умножения ${a} на ${b}: ${a * b}`;
 	} else if (mathOperation == 'Subt') {
-		return a - b;
+		return `Результат вычитания ${b} от ${a}: ${a - b}`;
 	} else if (mathOperation == 'Dvsn') {
-		return a + b;
+		return `Результат деления${a} на ${b}: ${a / b}`;
 	} else if (mathOperation == 'Exp') {
-		return a ** b;
+		return `${a} в ${b} степени: ${a ** b}`;
 	} else if (mathOperation == 'Rmndr') {
-		return a % b;
+		return `Остаток от деления ${a} на ${b}: ${a % b}`;
 	}
 	return 'unknown operation';
 }
 
-console.log(Calc('sum', 2, 3));
+console.log(Calc('sum', 2, 9));
 console.log(Calc('multi', 2, 3));
 console.log(Calc('Subt', 2, 3));
-console.log(Calc('Dvsn', 2, 3));
-console.log(Calc('Exp', 2, 3));
-console.log(Calc('Rmndr', 2, 3));
+console.log(Calc('Dvsn', 27, 3));
+console.log(Calc('Exp', 18, 3));
+console.log(Calc('Rmndr', 9, 3));
 console.log(Calc('su', 2, 3));
 console.log(Calc('su', '', 3));
 console.log(Calc('su', 2, ''));
