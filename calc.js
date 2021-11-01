@@ -14,13 +14,14 @@
 // В случае с неверным “идентификатором нужного действия” возвращайте “unknown operation”
 
 function Calc(mathOperation, a, b) {
-	if (
+	const isNotValid =
 		mathOperation == undefined ||
 		a == undefined ||
 		b == undefined ||
 		typeof a !== 'number' ||
-		typeof b !== 'number'
-	) {
+		typeof b !== 'number';
+
+	if (isNotValid) {
 		return 'Error';
 	} else if (mathOperation == 'sum') {
 		return a + b;
