@@ -13,28 +13,28 @@
 
 // В случае с неверным “идентификатором нужного действия” возвращайте “unknown operation”
 
-function Calc(mathOperation, a, b) {
+function Calc(mathOperation, num1, num2) {
 	const isNotValid =
 		mathOperation == undefined ||
-		a == undefined ||
-		b == undefined ||
-		typeof a !== 'number' ||
-		typeof b !== 'number';
+		num1 == undefined ||
+		num2 == undefined ||
+		typeof num1 !== 'number' ||
+		typeof num2 !== 'number';
 
 	if (isNotValid) {
 		return 'Error';
 	} else if (mathOperation == 'sum') {
-		return `Результат сложения ${a} и ${b}: ${a + b}`;
+		return `${num1} + ${num2} = ${num1 + num2}`;
 	} else if (mathOperation == 'multi') {
-		return `Результат умножения ${a} на ${b}: ${a * b}`;
+		return `${num1} x ${num2} = ${num1 * num2}`;
 	} else if (mathOperation == 'Subt') {
-		return `Результат вычитания ${b} от ${a}: ${a - b}`;
+		return `${num1} - ${num2} = ${num1 - num2}`;
 	} else if (mathOperation == 'Dvsn') {
-		return `Результат деления${a} на ${b}: ${a / b}`;
+		return `${num1} / ${num2} = ${num1 / num2}`;
 	} else if (mathOperation == 'Exp') {
-		return `${a} в ${b} степени: ${a ** b}`;
+		return `${num1} в ${num2} степени: ${num1 ** num2}`;
 	} else if (mathOperation == 'Rmndr') {
-		return `Остаток от деления ${a} на ${b}: ${a % b}`;
+		return `Остаток от деления ${num1} на ${num2}: ${num1 % num2}`;
 	}
 	return 'unknown operation';
 }
